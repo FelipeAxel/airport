@@ -1,4 +1,4 @@
-package com.passagensAerias.axelnovais.model.entity;
+package com.passagensAereas.axelnovais.model.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,7 +11,7 @@ import lombok.Builder;
 import lombok.Data;
 
 @Entity
-@Table(name = "usuario", schema ="passagensaerias")
+@Table(name = "usuario", schema ="passagensaereas")
 @Builder
 @Data
 public class Usuario {

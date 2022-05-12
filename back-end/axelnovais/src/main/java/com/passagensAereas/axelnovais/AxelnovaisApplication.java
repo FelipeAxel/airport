@@ -1,4 +1,4 @@
-package com.passagensAerias.axelnovais;
+package com.passagensAereas.axelnovais;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

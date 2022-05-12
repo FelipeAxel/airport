@@ -1,4 +1,4 @@
-package com.passagensAerias.axelnovais.model.entity;
+package com.passagensAereas.axelnovais.model.entity;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -17,13 +17,13 @@ import javax.persistence.Table;
 
 import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
 
-import com.passagensAerias.axelnovais.model.enums.StatusVoo;
+import com.passagensAereas.axelnovais.model.enums.StatusVoo;
 
 import lombok.Data;
 
 
 @Entity
-@Table(name ="voo", schema = "passagensaerias")
+@Table(name ="voo", schema = "passagensaereas")
 @Data 
 public class Voo {
 	
