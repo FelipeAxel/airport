@@ -3,6 +3,7 @@ package com.passagensAereas.axelnovais.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.passagensAereas.axelnovais.exceptions.RegraNegocioException;
 import com.passagensAereas.axelnovais.model.entity.Usuario;
 import com.passagensAereas.axelnovais.model.repositories.UsuarioRepository;
 import com.passagensAereas.axelnovais.service.UsuarioService;
@@ -34,7 +35,11 @@ public class UsuarioServiceImpl implements UsuarioService{
 
 	@Override
 	public void validarEmail(String email) {
-		// TODO Auto-generated method stub
+		boolean existe = repository.existsByEmail(email);
+		
+		if(existe) {
+			throw new RegraNegocioException("Ja existe um usario cadastrado com esse email");
+		}
 		
 	}
 
