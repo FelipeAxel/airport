@@ -33,7 +33,7 @@ public class UsuarioServiceImpl implements UsuarioService{
 			throw new ErroAutenticacao("Usuario não localizado com o email digitado");
 		}
 		if(!usuario.get().getSenha().equals(senha)) {
-			throw new ErroAutenticacao("Senha invalida");
+			throw new ErroAutenticacao("Senha inválida.");
 		}
 		return usuario.get();
 	}
