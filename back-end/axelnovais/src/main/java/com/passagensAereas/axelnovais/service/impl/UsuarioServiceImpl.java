@@ -33,7 +33,7 @@ public class UsuarioServiceImpl implements UsuarioService{
 			throw new ErroAutenticacao("Usuario não localizado com o email digitado");
 		}
 		if(!usuario.get().getSenha().equals(senha)) {
-			throw new ErroAutenticacao("Senha inválida.");
+			throw new ErroAutenticacao("Senha incorreta.");
 		}
 		return usuario.get();
 	}
@@ -50,7 +50,7 @@ public class UsuarioServiceImpl implements UsuarioService{
 		boolean existe = repository.existsByEmail(email);
 		
 		if(existe) {
-			throw new RegraNegocioException("Ja existe um usario cadastrado com esse email");
+			throw new RegraNegocioException("Ja existe um usuario cadastrado com esse email");
 		}
 		
 	}
